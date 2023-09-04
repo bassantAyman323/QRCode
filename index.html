@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Travel Permit</title>
+    <style>
+      table, thead {
+        margin: 0 auto;
+        width: 100%;
+        border-collapse: collapse;
+        border-color:white important!;
+      }
+      th, td {
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+    <script>
+      // Extract the parameters from the URL
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+       // if (!results) return null;
+       // alert(results);
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+      
+      // Display the parameters in the HTML
+      window.onload = function() {
+        var permitionNo = getParameterByName('permitionNo');
+        var shipName = getParameterByName('shipName');
+        var shipType = getParameterByName('shipType');
+        var ata = getParameterByName('ata');
+        var nationality = getParameterByName('nationality');
+        var captainName = getParameterByName('captainName');
+        var agentName = getParameterByName('agentName');
+        var previousPort = getParameterByName('previousPort');
+        var nextPort = getParameterByName('nextPort');
+        var emptyOrLoaded = getParameterByName('emptyOrLoaded');
+        var grt = getParameterByName('grt');
+        var permitionTillDate = getParameterByName('permitionTillDate');
+        var permitionDate = getParameterByName('permitionDate');
+        var permition_year = getParameterByName('permition_year');
+        var centralAuthority = getParameterByName('centralAuthority');
+        var TaxRegister = getParameterByName('TaxRegister');
+        var User = getParameterByName('User');
+        
+        document.getElementById('permitionNo').innerHTML = permitionNo;
+        document.getElementById('shipName').innerHTML = shipName;
+        document.getElementById('shipType').innerHTML = shipType;
+        document.getElementById('ata').innerHTML = ata;
+        document.getElementById('nationality').innerHTML = nationality;
+        document.getElementById('captainName').innerHTML = captainName;
+        document.getElementById('agentName').innerHTML = agentName;
+        document.getElementById('previousPort').innerHTML = previousPort;
+        document.getElementById('nextPort').innerHTML = nextPort;
+        document.getElementById('emptyOrLoaded').innerHTML = emptyOrLoaded;
+        document.getElementById('grt').innerHTML = grt;
+        document.getElementById('permitionTillDate').innerHTML = permitionTillDate;
+        document.getElementById('permitionDate').innerHTML = permitionDate;
+        document.getElementById('permition_year').innerHTML = permition_year;
+        document.getElementById('centralAuthority').innerHTML = centralAuthority;
+        document.getElementById('TaxRegister').innerHTML = TaxRegister;
+        document.getElementById('User').innerHTML = User;
+      };
+    </script>
+  </head>
+  <body>
+<TABLE cellSpacing="0" cellPadding="0" width="99%" align="center" border="0">
+  <TR>
+    <TD align="left"><img src="ADB_LOGO1.jpeg" alt="ADB Logo" width="150" height="100"></TD>
+    <TD>
+      <TABLE cellSpacing="0" cellPadding="0" border="0">
+        <TR>
+          <TD></TD>
+          <TD style="text-align: right;"><DIV id="centralAuthority"></DIV></TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD style="text-align: right;"><DIV id="TaxRegister"></DIV></TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+</TABLE>
+     <table>
+     <thead>
+         <tr>
+           <th></th>
+           <th style="text-align: center;">
+             
+             <h1>تصريح السفر</h1>
+             
+           </th>
+           <th></th>
+         </tr>
+        <tr>
+          <th></th>
+           <th style="text-align: center;">
+             
+             <h1>Departure Permission</h1>
+             
+          </th> 
+          <th></th>
+         </tr>   
+          <tr>
+            <th></th>
+            <th style="text-align: center;">
+              
+              <h1>Serial No.(<span id="permitionNo"></span>-<span id="permition_year"></span>)</h1>
+              
+            </th>   
+            <th></th>
+         </tr> 
+      </thead>
+      <tbody>
+        <tr>
+          <td><h1>Permission's Date</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="permitionDate"></span></h1></td>
+          <td style="text-align: right;"><h1>تاريخ التصريح</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Ship's Name</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="shipName"></span></h1></td>
+          <td style="text-align: right;"><h1>أسم السفينة</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Ship Type</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="shipType"></span></h1></td>
+          <td style="text-align: right;"><h1>نوع السفينة</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Ship's Arrival</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="ata"></span></h1></td>
+          <td style="text-align: right;"><h1>تاريخ وصول السفينة</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Nationality</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="nationality"></span></h1></td>
+          <td style="text-align: right;"><h1>الجنسية</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Master's Name</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="captainName"></span></h1></td>
+          <td style="text-align: right;"><h1>أسم الربان</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Agent's Name</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="agentName"></span></h1></td>
+          <td style="text-align: right;"><h1>أسم التوكيل</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Last Port</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="previousPort"></span></h1></td>
+          <td style="text-align: right;"><h1>الميناء السابق</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Next Port</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="nextPort"></span></h1></td>
+          <td style="text-align: right;"><h1>الميناء التالي</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Loaded/Unloaded</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="emptyOrLoaded"></span></h1></td>
+          <td style="text-align: right;"><h1>مشحونة/فارغة</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Gross Tonnage</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="grt"></span></h1></td>
+          <td style="text-align: right;"><h1>الحمولة الكلية</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Valid up to</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="permitionTillDate"></span></h1></td>
+          <td style="text-align: right;"><h1>التصريح نافذ مفعوله حتي</h1></td>
+        </tr>
+        <tr>
+          <td><h1>Issued By</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="User"></span></h1></td>
+          <td style="text-align: right;"><h1>محرر البيان</h1></td>
+        </tr>
+      </tbody>
+    </table>    
+    <p style="text-align: right;"> ****في
+      حالة مغادرة السفينة للميناء بعد انتهاء مدة سريان التصريح
+      ولم يتم تجديده تعتبر السفينة قد غادرت الميناء دون الحصول علي تصريح سفر 
+      ويطبق عليها احكام المادة 33 من القانون رقم 24 لسنة 83 والقواعد  والقرارات المعدلة له </p>
+    <p>If the event that the ship leaves the port after the permit has expired and has not been renewed, the ship is considered to have left the port without obtaining a 
+      travel permit, and the provisions of Article 33 of Low No.24 of 83 and its amending rules and sessions are applied to it.</p>
+  </body>
+  <img src="ADB_FOOTER_LOGO.JPG" alt="ADB Logo" width="375" height="85">
+</html>
