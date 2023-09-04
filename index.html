@@ -47,6 +47,7 @@
         var permition_year = getParameterByName('permition_year');
    
         var User = getParameterByName('User');
+        var visitNo = getParameterByName('visitNo');
         
         document.getElementById('permitionNo').innerHTML = permitionNo;
         document.getElementById('shipName').innerHTML = shipName;
@@ -63,6 +64,7 @@
         document.getElementById('permitionDate').innerHTML = permitionDate;
         document.getElementById('permition_year').innerHTML = permition_year;
         document.getElementById('User').innerHTML = User;
+       document.getElementById('visitNo').innerHTML = visitNo;
       };
     </script>
   </head>
@@ -113,6 +115,11 @@
           <td><h1>Permission's Date</h1></td>
           <td style="text-align: center; text-decoration: underline;"><h1><span id="permitionDate"></span></h1></td>
           <td style="text-align: right;"><h1>تاريخ التصريح</h1></td>
+        </tr>
+                <tr>
+          <td><h1>Visit No</h1></td>
+          <td style="text-align: center; text-decoration: underline;"><h1><span id="visitNo"></span></h1></td>
+          <td style="text-align: right;"><h1>رقم الطريق</h1></td>
         </tr>
         <tr>
           <td><h1>Ship's Name</h1></td>
